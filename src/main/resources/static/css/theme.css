@@ -1,0 +1,312 @@
+body{
+    background-color: black;
+    display: grid;
+	grid-template-areas:
+    "home header profile"
+    "nav section section";
+    grid-template-rows: 100px 1fr;
+    grid-template-columns: 12% 1fr 100px;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+
+header{
+	grid-area: header;
+    /*background: #333333;*/
+	border-bottom: 2px solid red;
+}
+
+home{
+	grid-area: home;
+	border-bottom: 2px solid red;
+}
+
+profile{
+	grid-area: profile;
+	border-bottom: 2px solid red;
+}
+
+nav {
+	background: #252830;
+    grid-area: nav;
+    border-right: 2px solid white;
+}
+
+nav:hover{
+    overflow-y: scroll;
+    overflow-X: hidden;
+}
+
+nav::-webkit-scrollbar {
+    width: 7px;
+}
+ 
+nav::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+ 
+nav::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+
+#leftmenu{
+    width: 250px;
+    list-style: none;
+    margin-top: 5px;
+    padding: 0;
+}
+
+.leftmenu a{
+    color: #fff;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.leftmenu li{
+    text-indent: 15px;
+    line-height: 40px;
+}
+
+.leftmenu li:hover{
+    color: #fff;
+    background-color: #1a1a1a;
+    cursor: pointer;
+    border-left: red 2px solid;
+}
+
+#searchbox{
+    width: 100%;
+    text-align:center;
+    padding-top: 20px;
+}
+
+#searchbar{
+    width: 60%;
+    height: 40px;
+    background-color: #252830;
+    border: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family:"Raleway","Roboto","Helvetica",sans-serif;
+    border: 2px solid white;
+    border-radius: 10px;
+    color: white;
+}
+
+#searchbutton{
+    cursor: pointer;
+    background-color: black;
+    border: none;
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    margin-left: 10px;
+    margin-top: 5px;
+    border: 2px solid white;
+    border-radius: 10px;
+    color: white;
+    
+}
+
+#searchbutton:hover{
+	cursor: pointer;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+}
+
+.displayNone{
+	display: none;
+}
+
+.profilePic{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
+    margin-right: 20px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+#dropdownContainer{
+	position: relative;
+}
+
+#dropDownMenu{
+	
+	position: relative;
+  	background-color: #252830;;
+	right: 55%;
+	min-width: 140px;
+}
+
+#profileLabel, #logoutLabel{
+	color: white;
+	padding: 10px 16px;
+  	text-decoration: none;
+  	display: block;
+}
+
+.dropDownMenu a:hover {	
+	background-color: #1a1a1a;
+	cursor: pointer;
+    border-left: red 2px solid;
+}
+
+.dropMenuPlaceholder{
+    height: 10px;
+}
+
+.send{
+	background-color: black;
+    border: 2px solid white;
+    padding: 15px 30px;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    margin-left: 1%;
+    margin-top: 1%;
+}
+
+.send:hover{
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+}
+
+#disconnect{
+	margin-left: 1%;
+    margin-top: 1%;
+}
+.disabled{
+	background-color: white;
+	border: 2px solid white;
+	border-radius: 10px;
+	padding: 15px 30px;
+    color: black;
+    font-weight: bold;
+}
+
+.enabled{
+	background-color: black;
+	border-radius: 10px;
+    border: 2px solid white;
+    padding: 15px 30px;
+    color: white;
+    font-weight: bold;
+    
+}
+
+.enabled:hover{
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+}
+
+#cpuoutput{
+	background-color: black;
+    border: 2px solid white;
+    color: white;
+    width: 400px;
+    /*height: 250px;*/
+    height: 295px;
+}
+
+.line {
+	stroke: #0072c6;
+	stroke-width: 3px;
+	fill: #0077cc;
+	fill-opacity: 0.2;
+	vector-effect: non-scaling-stroke;
+}
+
+#cpuload{
+	color: white;
+	font-weight: bold;
+}
+
+#core1output, #core2output, #core3output, #core4output, #core5output, #core6output, #core7output, #core8output{
+	background-color: black;
+    border: 2px solid white;
+    color: white;
+    width: 200px;
+    height: 125px;
+    
+}
+
+#virmemload, #phymemload, #cpuCore1load, #cpuCore2load, #cpuCore3load, #cpuCore4load, #cpuCore5load, #cpuCore6load, #cpuCore7load, #cpuCore8load{
+	color: white;
+	font-weight: bold;
+}
+
+#coreList{
+	list-style: none;
+	margin-left: -35px;
+}
+.coreItem{
+	float: left;
+	margin: 5px;
+}
+
+.redline {
+	stroke: #ff0000;
+	stroke-width: 3px;
+	fill: #ff0000;
+	fill-opacity: 0.2;
+	vector-effect: non-scaling-stroke;
+}
+
+#memList{
+	list-style: none;
+	margin-left: -35px;
+	clear: both;
+}
+.memItem{
+	float: left;
+    margin: 10px;
+    width: 45%;
+}
+
+#virtualMemOutput, #physicalMemOutput{
+	background-color: black;
+    border: 2px solid white;
+    color: white;
+    width: 100%;
+    height: 125px;
+}
+#storageName, #storageUsage{
+	clear: both;
+	color: white;
+	font-weight: bold;
+	margin-left: 1%;
+}
+.logitem{
+	color: white;
+}
+
+.displayNone{
+	display: none;
+}
+
+#storageUsageGraph{
+	margin-left: 1%;
+}
+
+#storageUsed{
+	background-color: black;
+    border: 2px solid white;
+    padding: 15px 30px;
+    color: white;
+    font-weight: bold;
+    /*border-radius: 10px;*/
+}
+
+
